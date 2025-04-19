@@ -1,0 +1,48 @@
+<header class="header container mt-4">
+  <div class="header-section-books" >
+   
+    <div class="category-icon cursor-icon" [ngStyle]="{ 'background-image': 'url(/Back.svg)' }" (click)="goBack()"
+   
+  ></div>
+    <h2 class="text-blue">{{ topic | titlecase }}</h2>
+  </div>
+  
+  <div class="search-box">
+  
+    <mat-form-field  class="small">
+      <mat-icon matPrefix>search</mat-icon>
+      
+      <input
+       placeholder="Search"
+        matInput
+        [(ngModel)]="searchQuery"
+        (input)="onSearch()"
+      />
+    </mat-form-field>
+  </div>
+</header>
+<section class="body-section">
+  <div
+  class="container book-grid"
+  infinite-scroll
+  [infiniteScrollDistance]="scrollDistance"
+  [infiniteScrollUpDistance]="scrollUpDistance"
+  [infiniteScrollThrottle]="throttle"
+  (scrolled)="onScrollDown()"
+>
+  <ng-container *ngFor="let book of books">
+    <div class="book-card" (click)="openBook(book)" style="cursor: pointer;">
+      <img [src]="book.formats['image/jpeg']" alt="{{ book.title }}" />
+      <div class="book-title">{{ book.title | uppercase }}</div>
+      <div class="book-author">
+        {{ book.authors?.[0]?.name || 'Unknown Author' }}
+      </div>
+    </div>
+  </ng-container>
+</div>
+
+<div class="container book-grid spinner" *ngIf="loading">
+  <mat-spinner diameter="40"></mat-spinner>
+</div>
+</section>
+
