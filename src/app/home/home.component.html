@@ -1,0 +1,40 @@
+<header class="header-section">
+  <div class="container-header mt-4">
+    <h1 class="mat-headline">Gutenberg Project</h1>
+ 
+    <h2>
+      A social cataloging website that allows you to freely search its database of books, annotations, and reviews.
+    </h2>
+  </div>
+  
+</header>
+<section class="body-section">
+  <div class="container mt-4">
+    <mat-grid-list [cols]="cols" rowHeight="70px" gutterSize="16px">
+      <mat-grid-tile *ngFor="let category of categories">
+        <mat-card class="width-80"
+        (click)="navigate(category)">
+          <mat-card-content>
+            <div class="flex justify-content-space-between ">
+              <div class="items-center gap-2">
+                <div class="category-icon"   [ngStyle]="{ 'background-image': 'url(/' + category.name + '.svg)' }"></div>
+  
+                <span class="font-medium">{{ category.name.toUpperCase() }}</span>
+              </div>
+              
+    
+              <div class="category-icon" [ngStyle]="{ 'background-image': 'url(/Next.svg)' }"></div>
+          </div>
+          </mat-card-content>
+        </mat-card>
+        
+    
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+
+</section>
+<footer>
+
+</footer>
+  

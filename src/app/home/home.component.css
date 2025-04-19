@@ -1,0 +1,26 @@
+.flex.justify-content-space-between {
+    display: flex;
+    justify-content: space-between;
+}
+.width-80{
+    width:80%;
+    cursor:pointer;
+}
+
+  .items-center.gap-2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.header-section{
+    background-image: url('/Pattern.svg');
+
+}
+.container-header{
+    max-width: 70%;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+.mat-mdc-text-field-wrapper.mdc-text-field.mdc-text-field--outlined {
+    height:3rem !important;
+}

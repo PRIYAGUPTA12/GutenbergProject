@@ -1,1 +1,103 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: Montserrat-semibold; 
+  src: url('/fonts/Montserrat-SemiBold.ttf') ;
+
+}
+
+@font-face {
+  font-family: Montserrat-bold; 
+  src: url('/fonts/Montserrat-Bold.ttf') ;
+
+}
+@font-face {
+  font-family: Montserrat-Regular; 
+  src: url('/fonts/Montserrat-Regular.ttf') ;
+
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family:  Montserrat-Regular;font-size:16px }
+
+
+h2{
+
+  font-family: Montserrat-semibold;
+  font-size: 1.75rem;
+ }
+ .category-icon {
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.text-blue{
+  color: #5E56E7;
+}
+/* styles.css */
+
+/* Reset some spacing */
+
+  
+  /* Container utility */
+  .container {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+  .body-section{
+    background-color: #F0F0F6;
+   }
+  /* Typography */
+  h1 {
+    font-size: 3rem;
+    font-family:Montserrat-bold;
+    color: #5E56E7; /* Indigo-800 */
+  }
+  .font-medium{
+
+    font-size: 20px;
+  }
+  
+  p {
+    font-size: 1rem;
+    color: #6b7280; /* gray-500 */
+  }
+  .cursor-icon{
+    cursor:pointer;
+  }
+  /* Material Card Hover */
+  .mat-card {
+    transition: all 0.3s ease;
+    border-radius: 12px;
+    background-color: white;
+  }
+  
+  .mat-card:hover {
+    background-color: #e0e7ff; /* Indigo-100 */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* Responsive Grid */
+  @media (max-width: 768px) {
+    .mat-grid-list {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .mat-grid-tile {
+      width: 100%;
+      margin-bottom: 16px;
+    }
+    .flex
+    {
+        display:flex;
+    }
+    .justify-content-space-between {
+        justify-content: space-between;
+    }
+  
+   
+  }
+  
